@@ -105,10 +105,10 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -b "${BRANCH}"
 
-          sed -i "s/default: '[0-9][^']*'/default: '${VERSION}'/" \
-            .github/workflows/build-crossplane-provider-btp-fips.yml
+          sed -i "s/VERSION:-[0-9][^}]*/VERSION:-${VERSION}/" \
+            build-crossplane-provider-btp-fips.sh
 
-          git add .github/workflows/build-crossplane-provider-btp-fips.yml
+          git add build-crossplane-provider-btp-fips.sh
           git commit -m "chore: bump default version to ${VERSION}"
           git push origin "${BRANCH}"
 
