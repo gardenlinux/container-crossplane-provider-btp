@@ -2,7 +2,7 @@ name: Check upstream Crossplane Provider BTP release
 
 on:
   schedule:
-    - cron: '17 6 * * *'
+    - cron: '10 2 * * *'
   workflow_dispatch:
     inputs:
       upstream_repo:
