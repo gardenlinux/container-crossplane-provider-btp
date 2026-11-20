@@ -8,7 +8,7 @@ BASE_IMAGE="${BASE_IMAGE:-ghcr.io/gardenlinux/gardenlinux/fips:1877.22}"
 WORKDIR="${WORKDIR:-./.build/crossplane-provider-btp-fips-build}"
 IMAGE_NAME="${IMAGE_NAME:-gl-fips-crossplane-provider-btp}"
 ARCH="${ARCH:-$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/')}"
-VERSION="${VERSION:-2.3.1}"
+VERSION="${VERSION:-2.3.2}"
 UPSTREAM_GIT_SHA="${UPSTREAM_GIT_SHA:-f25ff4a6aa6b41f67049b765e97e47aa3c183373}"
 GO_IMAGE="${GO_IMAGE:-golang:1.27-bookworm}"
 
